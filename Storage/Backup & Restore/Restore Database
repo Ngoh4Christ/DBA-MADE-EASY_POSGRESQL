@@ -1,0 +1,2 @@
+-Restore Database: Command to restore a database from a backup
+pg_restore -U username -W -d dbname /path/to/backup/dbname.bak;
