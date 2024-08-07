@@ -1,0 +1,2 @@
+--Monitor Active Connections: Shows active database connections.
+SELECT pid, usename, datname, application_name, client_addr, backend_start, state FROM pg_stat_activity WHERE state <> 'idle';
