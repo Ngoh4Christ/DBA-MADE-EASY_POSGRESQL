@@ -1,0 +1,2 @@
+Check Index Sizes: Lists the size of each index on tables in the public schema.
+  SELECT t.relname AS table_name, i.relname AS index_name, pg_size_pretty(pg_relation_size(i.indexrelid)) AS index_size FROM pg_index x JOIN pg_class c ON c.oid = x.indrelid JOIN pg_class i ON i.oid = x.indexrelid JOIN pg_namespace n ON n.oid = c.relnamespace JOIN pg_tables t ON t.tablename = c.relname WHERE t.schemaname = 'public' ORDER BY pg_relation_size(i.indexrelid) DESC;
