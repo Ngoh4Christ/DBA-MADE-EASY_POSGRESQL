@@ -1,0 +1,2 @@
+--Backup Database: Command to create a compressed backup of a database.
+pg_dump -U username -W -F c dbname > /path/to/backup/dbname.bak;
