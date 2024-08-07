@@ -1,0 +1,3 @@
+--Check Disk Space Usage: Shows disk usage for all mounted filesystems.
+df -h;
+
